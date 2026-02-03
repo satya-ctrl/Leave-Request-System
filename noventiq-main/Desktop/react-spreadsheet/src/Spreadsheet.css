@@ -1,0 +1,97 @@
+.spreadsheet {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  
+  .header h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  .header-details {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .table {
+    border: 1px solid #ddd;
+  }
+  
+  .row {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .header-row {
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .column-header {
+    border-right: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  input {
+    border: none;
+    background: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  button {
+    margin: 10px 0;
+  }
+  .btnPst{
+    position: absolute;
+    left: 1.3rem;
+  }
+  
+  .table-wrap:nth-of-type(n+2) {
+    padding-top: 4rem;
+}
+
+.row > :first-child {
+    margin-right: 50rem;
+}
+
+/* Apply the standard gap for other columns */
+.row > :not(:first-child) {
+    margin-right: 1rem; /* Adjust as needed */
+}
+
+.drop-target{
+    cursor: pointer;
+}
+.tab {
+    cursor: pointer;
+    margin-right: 2rem;
+    color: #ddd;
+}
+
+.tab.active {
+    color: #000;
+}
+.tabs {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem 0 2rem 0;
+}
+.btn-add-tab{
+    margin: 0;
+}
