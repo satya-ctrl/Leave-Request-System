@@ -1,0 +1,156 @@
+
+    .login, .login-button{
+        max-width: max-content ;/* Optional: Limit the max width of the form container */
+        margin: auto; /* Center the form horizontally */
+    }
+
+    .login a {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    a{
+        color: #000000 !important;
+    }
+
+    .form-login {
+        border: 1px solid #000000;
+        background-color: #ffffff;
+        padding: 10px 30px 2px 10px;
+        margin-bottom: 20px;
+        display: inline-block; /* Ensure form and button stay on the same line */
+    }
+
+    .form-group{
+        display: flex;
+        align-items: center;
+    }
+
+    .form-login label {
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 10px;
+        margin-left: 20px;
+        display: block;
+        color: #000000;
+        flex: 0 0 100px; /* Fixed width for the label */
+        margin-right: 10px; /* Add space between the label and the input field */
+    }
+
+    .input-email,
+    .input-password{
+        width: 100%;
+        border-radius: 5px;
+        margin: 4px 0 10px 0;
+        padding: 5px;
+        display: flex;
+        flex: 1;
+        align-items: center;
+        border: 1px solid #a19999;
+    }
+
+    .input-password{
+        margin: 4px 0 0 0;
+    }
+
+    .icon {
+        padding: 4px;
+        color: #666;
+        min-width: 30px;
+        text-align: center;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"] {
+        width: 100%;
+        border: 0;
+        background: none;
+        font-size: 16px;
+        padding: 4px 0;
+        outline: none;
+        -webkit-appearance: none; /* Remove default password toggle icon on WebKit browsers */
+        -moz-appearance: none; /* Remove default password toggle icon on Firefox */
+        appearance: none; /* Remove default password toggle icon on other browsers */
+    }
+
+    .input-password input::-ms-reveal,
+    .input-password input::-ms-clear {
+        display: none; /* Hide the default password toggle and clear icons in Edge */
+    }
+
+    .toggle-password {
+        right: 10px; /* Position the eye icon inside the input field */
+        cursor: pointer;
+    }
+
+    .error{
+        text-align: center;
+        color: #ee4136;
+    }
+
+    .forgot{
+        text-decoration: underline;
+        text-align: right;
+        width: 70%;
+    }
+
+    .language-dropdown {
+        position: relative;
+        display: inline-block;
+        width: 50%;
+        margin: 4px 0 0 0;
+    }
+
+    .language-dropdown::after {
+        content: '';
+        position: absolute;
+        top: 16px;
+        right: 30px; /* Adjust position to align with the dropdown icon */
+        height: 57%;
+        width: 1px;
+        background-color: #b0a8a8; /* Border color */
+    }
+
+    .language-dropdown select {
+        width: 100%;
+        border-radius: 5px;
+        margin: 16px 0 10px 0;
+        padding: 10px;
+        display: flex;
+        flex: 1;
+        align-items: center;
+        border: 1px solid #a19999;
+        appearance: none;
+        color: #85afbf;
+        outline: none; /* Remove focus outline */
+    }
+
+    .language-dropdown .dropdown-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none; /* Allow clicks to pass through */
+        color: #b0a8a8;
+    }
+    
+    .remember-me{
+        text-decoration: unset;
+        width: 73%;
+    }
+
+    .form-check-label{
+        margin-left: 5px;
+    }
+
+    .login-button{
+        text-align: center;
+    }
+    button{
+        text-align: center;
+        background-color: #000000;
+        color: #ffffff;
+        padding: 10px 80px 10px 80px;
+        border-radius: 5px;
+    }

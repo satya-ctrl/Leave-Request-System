@@ -1,0 +1,29 @@
+.header-container {
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  max-width: 100%; /* Ensures the logo doesn't overflow its container */
+  height: auto; /* Maintains the aspect ratio */
+  width: auto; /* Ensures the width scales with the screen size */
+}
+
+/* Optional: Additional responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    padding: 5px;
+  }
+
+  .logo {
+    max-width: 80%; /* Adjust as needed for smaller screens */
+  }
+}

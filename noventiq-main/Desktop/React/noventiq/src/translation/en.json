@@ -1,0 +1,17 @@
+{
+    "login": {
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "passwordPlaceholder": "Enter your password",
+      "password": "Password",
+      "forgotPassword": "Forgot Password?",
+      "language": "Language",
+      "rememberMe": "Remember Me",
+      "loginButton": "Log in",
+      "errors": {
+        "email": "Please enter a valid corporate email address.",
+        "password": "Please enter your password."
+      }
+    }
+  }
+  
