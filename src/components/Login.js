@@ -43,7 +43,7 @@ function Login(){
              setEmail(rememberMeCookie);
              setRememberMe(true);
          }
-    }, []); // Empty dependency array ensures this effect runs only once
+    }, [i18n]); // Dependency array ensures this runs on mount and when i18n updates
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
