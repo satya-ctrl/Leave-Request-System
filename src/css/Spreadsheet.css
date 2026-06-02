@@ -1,0 +1,371 @@
+.spreadsheet-portal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) both;
+}
+
+.spreadsheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .spreadsheet-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.spreadsheet-header h2 {
+  font-size: 28px;
+  color: #1a1a1a;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.spreadsheet-header .subtitle {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+.total-portfolio-sum {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #ffffff;
+  padding: 16px 24px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  box-shadow: 0 8px 20px rgba(30, 60, 114, 0.15);
+}
+
+.sum-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+.sum-val {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* Tabs */
+.sheet-tabs-container {
+  margin-bottom: 25px;
+  border-bottom: 2px solid #eaedf1;
+}
+
+.sheet-tabs-list {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  align-items: center;
+}
+
+.sheet-tab-item {
+  padding: 12px 24px;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: #7f8c8d;
+  background-color: #fafbfc;
+  border: 1px solid #eaedf1;
+  border-bottom: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.sheet-tab-item.active {
+  color: #007bff;
+  background-color: #ffffff;
+  border-color: #eaedf1;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.02);
+  transform: translateY(2px);
+  position: relative;
+}
+
+.sheet-tab-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #007bff;
+}
+
+.tab-editable-name {
+  outline: none;
+}
+
+.tab-editable-name:focus {
+  border-bottom: 1.5px solid #007bff;
+}
+
+.btn-add-sheet {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.btn-add-sheet:hover {
+  color: #0056b3;
+}
+
+/* Sheet Table Section Card */
+.sheet-tables-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.sheet-table-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  border: 1px solid #eaedf1;
+  overflow: hidden;
+}
+
+.table-card-header {
+  background-color: #fafbfc;
+  padding: 16px 24px;
+  border-bottom: 1px solid #eaedf1;
+}
+
+.table-editable-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2c3e50;
+  outline: none;
+  display: inline-block;
+  min-width: 200px;
+  border-bottom: 1px dashed transparent;
+  transition: border-color 0.2s ease;
+}
+
+.table-editable-title:hover {
+  border-color: #bdc3c7;
+}
+
+.table-editable-title:focus {
+  border-color: #007bff;
+  border-bottom-style: solid;
+}
+
+.table-editable-title[placeholder]:empty:before {
+  content: attr(placeholder);
+  color: #bdc3c7;
+}
+
+/* Rows and Grid Structure */
+.sheet-row {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid #eaedf1;
+  background-color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+
+.header-row {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #eaedf1;
+  font-weight: 600;
+  color: #7f8c8d;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.body-row:hover {
+  background-color: #fafcfd;
+}
+
+.footer-row {
+  background-color: #fafbfc;
+  font-weight: 700;
+  color: #2c3e50;
+  border-bottom: none;
+}
+
+/* Draggable Wrappers */
+.draggable-item-container {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.drag-handle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  background-color: #fafbfc;
+  border-right: 1px solid #eaedf1;
+  color: #bdc3c7;
+  cursor: grab;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.draggable-item-container:hover .drag-handle {
+  background-color: #f1f2f6;
+  color: #7f8c8d;
+}
+
+.drop-target-container {
+  border-bottom: 1px solid #eaedf1;
+}
+
+.drop-target-container:last-child {
+  border-bottom: none;
+}
+
+/* Cells Layout with Flex Percentages */
+.header-cell, .sheet-cell, .footer-cell {
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.asset-col {
+  flex: 3;
+}
+
+.irr-col {
+  flex: 1.5;
+  border-left: 1px solid #eaedf1;
+}
+
+.value-col {
+  flex: 1.5;
+  border-left: 1px solid #eaedf1;
+}
+
+.action-col {
+  flex: 0 0 80px;
+  border-left: 1px solid #eaedf1;
+  justify-content: center;
+}
+
+.editable-cell {
+  outline: none;
+  cursor: text;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.editable-cell:hover {
+  background-color: #f9fbfd;
+}
+
+.editable-cell:focus {
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 2px #007bff;
+}
+
+.editable-cell[placeholder]:empty:before {
+  content: attr(placeholder);
+  color: #bdc3c7;
+}
+
+/* Footer Section Sum text styles */
+.total-value-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: #16a085;
+}
+
+/* Delete Row Button */
+.btn-delete-row {
+  background: none;
+  border: none;
+  color: #ff7675;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 6px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.btn-delete-row:hover {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* Card Actions */
+.table-card-footer {
+  padding: 16px 24px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1.5px solid #eaedf1;
+}
+
+.btn-add-row {
+  background-color: #ffffff;
+  border: 1.5px solid #007bff;
+  color: #007bff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-add-row:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Add Table Section Area */
+.add-table-btn-container {
+  text-align: center;
+  padding: 10px 0 30px 0;
+}
+
+.btn-add-table {
+  background-color: #2c3e50;
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-add-table:hover {
+  background-color: #1a252f;
+  transform: translateY(-2px);
+}
+
+.btn-add-table:active {
+  transform: translateY(0);
+}

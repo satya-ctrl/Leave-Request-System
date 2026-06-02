@@ -1,0 +1,16 @@
+{
+  "login": {
+    "email": "ইমেইল",
+    "emailPlaceholder": "আপনার ইমেইল লিখুন",
+    "passwordPlaceholder": "আপনার পাসওয়ার্ড লিখুন",
+    "password": "পাসওয়ার্ড",
+    "forgotPassword": "পাসওয়ার্ড ভুলে গেছেন?",
+    "language": "ভাষা",
+    "rememberMe": "মনে রাখুন",
+    "loginButton": "লগইন",
+    "errors": {
+      "email": "দয়া করে একটি বৈধ কর্পোরেট ইমেল ঠিকানা লিখুন।",
+      "password": "দয়া করে আপনার পাসওয়ার্ড লিখুন।"
+    }
+  }
+}

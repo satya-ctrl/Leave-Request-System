@@ -1,0 +1,16 @@
+{
+  "login": {
+    "email": "ईमेल",
+    "emailPlaceholder": "अपना ईमेल दर्ज करें",
+    "passwordPlaceholder": "अपना पासवर्ड दर्ज करें",
+    "password": "पासवर्ड",
+    "forgotPassword": "पासवर्ड भूल गए?",
+    "language": "भाषा",
+    "rememberMe": "मुझे याद रखें",
+    "loginButton": "लॉग इन करें",
+    "errors": {
+      "email": "कृपया एक मान्य कॉर्पोरेट ईमेल पता दर्ज करें।",
+      "password": "कृपया अपना पासवर्ड दर्ज करें।"
+    }
+  }
+}

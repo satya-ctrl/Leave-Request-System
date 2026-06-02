@@ -1,0 +1,105 @@
+.header-container {
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  max-width: 100%; /* Ensures the logo doesn't overflow its container */
+  height: auto; /* Maintains the aspect ratio */
+  width: 140px; /* Standardize width for logo */
+  animation: fadeInDown 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) both;
+}
+
+/* Row Layout when Navigation is present (Logged-in Portal) */
+.header-container.with-nav {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaedf1;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.header-container.with-nav .header {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.header-container.with-nav .logo {
+  width: 110px; /* Slightly smaller logo in navigation bar */
+}
+
+/* Navigation Items */
+.header-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #57606f;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: #f1f2f6;
+  color: #2f3542;
+}
+
+.nav-btn.active {
+  background-color: #007bff;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Additional responsive adjustments */
+@media (max-width: 768px) {
+  .header-container.with-nav {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .header-container.with-nav .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo {
+    max-width: 80%; /* Adjust as needed for smaller screens */
+  }
+}
